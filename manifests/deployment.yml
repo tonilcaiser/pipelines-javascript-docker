@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: intestjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: intestjavascriptdocker 
+    spec:
+      containers:
+        - name: intestjavascriptdocker 
+          image: incregistry.azurecr.io/intestjavascriptdocker
+          ports:
+          - containerPort: 8080
